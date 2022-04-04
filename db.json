@@ -1,0 +1,28 @@
+{
+  "signup": [
+    {
+      "name": "Hồ Hoàng Hảo",
+      "email": "admin@gmail.com",
+      "mobile": 123456789,
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "name": "1",
+      "email": "1",
+      "mobile": 1,
+      "password": "1",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

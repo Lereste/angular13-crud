@@ -1,0 +1,48 @@
+<h1 mat-dialog-title>Student Information</h1>
+<div mat-dialog-content>
+  <form [formGroup]="studentForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Student Name</mat-label>
+      <input formControlName="studentName" matInput placeholder="Enter Student Name ">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Gender</mat-label>
+      <mat-select formControlName="gender" placeholder="Gender">
+        <mat-option value="Male">Male</mat-option>
+        <mat-option value="Female">Female</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Choose your birth date - (Ex. 03/31/2022)</mat-label>
+      <input formControlName="birth" matInput [matDatepicker]="picker">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <!-- <label for="">
+      <h1>Product Freshness</h1>
+    </label>
+    <mat-radio-group formControlName="freshness" class="example-radio-group">
+      <mat-radio-button class="example-radio-button" *ngFor="let fresh of freshnessList" [value]="fresh">
+        {{fresh}}
+      </mat-radio-button>
+    </mat-radio-group> -->
+
+    <mat-form-field appearance="outline">
+      <mat-label>Updated At</mat-label>
+      <textarea formControlName="updatedAt" matInput readonly></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>City</mat-label>
+      <textarea formControlName="city" matInput placeholder="Enter City"></textarea>
+    </mat-form-field>
+  </form>
+</div>
+
+<div mat-dialog-action [align]="'end'" class="flex__center">
+  <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+  <button mat-raised-button color="primary" (click)="addStudent()">{{actionBtn}}</button>
+</div>
