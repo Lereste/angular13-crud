@@ -6,12 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 `npm install`
 
 ## Run project
-`ng serve` or `npm run start`
-
-After this you need to run db.json because i don't have a api for create authentication
-
-`npx json-server --watch db.json`
-
+`npm run start`
 
 ## This project have 3 pages
 ### 1) Login
